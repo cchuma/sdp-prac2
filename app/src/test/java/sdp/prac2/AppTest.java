@@ -63,7 +63,7 @@ public class Task6Test {
 }
 
 
-    public static void tests_Task5() {
+    @Test void tests_Task5() {
         // Arrange: Create input data and expected results
         int[] sortedList = {1, 2, 3, 4, 5};
         int[] unsortedList = {5, 2, 3, 4, 1};
