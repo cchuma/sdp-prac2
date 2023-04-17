@@ -103,8 +103,8 @@ public class Task6Test {
 
     @Test void tests_Task5() {
         // Arrange: Create input data and expected results
-        int[] sortedList = {1, 2, 3, 4, 5};
-        int[] unsortedList = {5, 2, 3, 4, 1};
+        List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> unsortedList = Arrays.asList(5, 2, 3, 4, 1);
         
         // Act: Call the function under test
         boolean isSortedResult1 = Task5(sortedList);
