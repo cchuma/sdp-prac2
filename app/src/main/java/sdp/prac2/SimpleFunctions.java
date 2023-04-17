@@ -5,6 +5,23 @@ import java.util.*;
 public class SimpleFunctions {
     public SimpleFunctions() {}
 
+    public int Task1 (int[] a , int[] b){
+	
+		int x = 0;
+		
+		for (int i1 = 0, i1 < b.length, i1++){
+			bnum = b.get(i1);
+			for(int i = 0, i < bnum,i++){
+				if (bnum > a.length){
+					break;
+				}else{
+					x = x + a.get(i);
+				}
+			}
+			return x;
+		}
+    }
+
     public static List<Integer> Task4(int[] a, int[] b) {
         if (a.length != b.length) {                                 // Check if the lengths of the lists are the same
             return null;
