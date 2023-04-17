@@ -5,7 +5,7 @@ import java.util.*;
 public class SimpleFunctions {
     public SimpleFunctions() {}
 
-    public static List<Integer> Task4(int[] a, int[] b) {
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
         if (a.length != b.length) {                                 // Check if the lengths of the lists are the same
             return null;
         }
