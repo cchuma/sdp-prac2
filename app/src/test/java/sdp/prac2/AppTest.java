@@ -7,4 +7,59 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
+public class Task6Test {
+
+    
+    @Test void testTask6() {
+
+        App classBeingTested = new App();
+
+        List<Integer> data = new ArrayList<>();
+
+        input.add(100);
+        input.add(150);
+        input.add(200);
+        input.add(250);
+        input.add(300);
+
+        List<Integer> expected = new ArrayList<>();
+        
+        expected.add(100);
+        expected.add(200);
+        expected.add(200);
+        expected.add(300);
+        expected.add(300);
+
+        List<Integer> result = classBeingTested.Task6(data);
+        assertEquals(expected, result);
+    }
+
+    @Test void testTask6Version2() {
+
+        App classBeingTested = new App();
+
+        List<Integer> data = new ArrayList<>();
+        
+        input.add(100);
+        input.add(75);
+        input.add(300);
+        input.add(450);
+        input.add(25);
+        input.add(150);
+
+        List<Integer> expected = new ArrayList<>();
+
+        expected.add(100);
+        expected.add(100);
+        expected.add(300);
+        expected.add(500);
+        expected.add(100);
+        expected.add(200);
+        
+        List<Integer> result = classBeingTested.Task6(data);
+        assertEquals(expected, result);
+    }
+}
+
 }
