@@ -22,11 +22,11 @@ public class SimpleFunctions {
 		}
     }
 
-    public static List<Integer> Task4(int[] a, int[] b) {
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
         if (a.length != b.length) {                                 // Check if the lengths of the lists are the same
             return null;
         }
-        
+
 
         List<Integer> results = new ArrayList<>();                  // Initialize an empty list to hold the result
         // Loop over the length of a
