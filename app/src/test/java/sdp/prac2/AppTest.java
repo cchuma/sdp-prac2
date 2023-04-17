@@ -10,7 +10,45 @@ class AppTest {
 
 public class Task6Test {
 
-    
+    @Test void testTest2() {
+        App classBeingTested = new App();
+
+        List<String> data = new ArrayList<>();
+
+        data.add("Superman");
+        data.add("Dance");
+        data.add("danger"); 
+
+        List<String> dataExpected = new ArrayList<>();
+
+        dataExpected.add("uperman");
+        dataExpected.add("ance");
+        dataExpected.add("anger"); 
+
+        List<String> results = classBeingTested.Task2(data);
+        assertEquals(dataExpected, results);
+    }
+
+    @Test void testTest2_2() {
+        App classBeingTested = new App();
+
+        List<String> data = new ArrayList<>();
+
+        data.add("Numbers");
+        data.add("Music");
+        data.add("Mind"); 
+
+        List<String> dataExpected = new ArrayList<>();
+
+        dataExpected.add("umbers");
+        dataExpected.add("usic");
+        dataExpected.add("ind"); 
+
+        List<String> results = classBeingTested.Task2(data);
+        assertEquals(dataExpected, results);
+    }
+
+  
     @Test void testTask6() {
 
         App classBeingTested = new App();
