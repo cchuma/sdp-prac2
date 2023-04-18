@@ -8,113 +8,161 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-public class Task6Test {
+    public class Task6Test {
 
-    @Test void testTest2() {
-        App classBeingTested = new App();
+        @Test
+        void testTest2() {
+            App classBeingTested = new App();
 
-        List<String> data = new ArrayList<>();
+            List<String> data = new ArrayList<>();
 
-        data.add("Superman");
-        data.add("Dance");
-        data.add("danger"); 
+            data.add("Superman");
+            data.add("Dance");
+            data.add("danger");
 
-        List<String> dataExpected = new ArrayList<>();
+            List<String> dataExpected = new ArrayList<>();
 
-        dataExpected.add("uperman");
-        dataExpected.add("ance");
-        dataExpected.add("anger"); 
+            dataExpected.add("uperman");
+            dataExpected.add("ance");
+            dataExpected.add("anger");
 
-        List<String> results = classBeingTested.Task2(data);
-        assertEquals(dataExpected, results);
+            List<String> results = classBeingTested.Task2(data);
+            assertEquals(dataExpected, results);
+        }
+
+        @Test
+        void testTest2_2() {
+            App classBeingTested = new App();
+
+            List<String> data = new ArrayList<>();
+
+            data.add("Numbers");
+            data.add("Music");
+            data.add("Mind");
+
+            List<String> dataExpected = new ArrayList<>();
+
+            dataExpected.add("umbers");
+            dataExpected.add("usic");
+            dataExpected.add("ind");
+
+            List<String> results = classBeingTested.Task2(data);
+            assertEquals(dataExpected, results);
+        }
+
+        @Test
+        void testTest4_1() {
+            App classBeingTested = new App();
+            // Arrange
+            List<Integer> list1 = new ArrayList<>();
+
+            list1.add(56);
+            list1.add(32);
+            list1.add(13);
+
+            List<Integer> list2 = new ArrayList<>();
+
+            list2.add(3);
+            list2.add(12);
+            list2.add(24);
+            // Act
+            List<Integer> expectedData = new ArrayList<>();
+
+            expectedData.add(80);
+            expectedData.add(44);
+            expectedData.add(17);
+            // Assert
+            List<Integer> results = classBeingTested.Task4(list1, list2);
+            assertEquals(expectedData, results);
+        }
+
+        @Test
+        void testTest4_2() {
+            App classBeingTested = new App();
+
+            // Arrange
+            List<Integer> list1 = new ArrayList<>();
+
+            list1.add(56);
+            list1.add(32);
+            list1.add(13);
+
+            List<Integer> list2 = new ArrayList<>();
+
+            list2.add(3);
+            list2.add(12);
+
+            // Assert
+            List<Integer> results = classBeingTested.Task4(list1, list2);
+            assertEquals(null, results);
+        }
+
+        @Test
+        void testTask6() {
+
+            App classBeingTested = new App();
+
+            List<Integer> data = new ArrayList<>();
+
+            input.add(100);
+            input.add(150);
+            input.add(200);
+            input.add(250);
+            input.add(300);
+
+            List<Integer> expected = new ArrayList<>();
+
+            expected.add(100);
+            expected.add(200);
+            expected.add(200);
+            expected.add(300);
+            expected.add(300);
+
+            List<Integer> result = classBeingTested.Task6(data);
+            assertEquals(expected, result);
+        }
+
+        @Test
+        void testTask6Version2() {
+
+            App classBeingTested = new App();
+
+            List<Integer> data = new ArrayList<>();
+
+            input.add(100);
+            input.add(75);
+            input.add(300);
+            input.add(450);
+            input.add(25);
+            input.add(150);
+
+            List<Integer> expected = new ArrayList<>();
+
+            expected.add(100);
+            expected.add(100);
+            expected.add(300);
+            expected.add(500);
+            expected.add(100);
+            expected.add(200);
+
+            List<Integer> result = classBeingTested.Task6(data);
+            assertEquals(expected, result);
+        }
     }
 
-    @Test void testTest2_2() {
-        App classBeingTested = new App();
-
-        List<String> data = new ArrayList<>();
-
-        data.add("Numbers");
-        data.add("Music");
-        data.add("Mind"); 
-
-        List<String> dataExpected = new ArrayList<>();
-
-        dataExpected.add("umbers");
-        dataExpected.add("usic");
-        dataExpected.add("ind"); 
-
-        List<String> results = classBeingTested.Task2(data);
-        assertEquals(dataExpected, results);
-    }
-
-  
-    @Test void testTask6() {
-
-        App classBeingTested = new App();
-
-        List<Integer> data = new ArrayList<>();
-
-        input.add(100);
-        input.add(150);
-        input.add(200);
-        input.add(250);
-        input.add(300);
-
-        List<Integer> expected = new ArrayList<>();
-        
-        expected.add(100);
-        expected.add(200);
-        expected.add(200);
-        expected.add(300);
-        expected.add(300);
-
-        List<Integer> result = classBeingTested.Task6(data);
-        assertEquals(expected, result);
-    }
-
-    @Test void testTask6Version2() {
-
-        App classBeingTested = new App();
-
-        List<Integer> data = new ArrayList<>();
-        
-        input.add(100);
-        input.add(75);
-        input.add(300);
-        input.add(450);
-        input.add(25);
-        input.add(150);
-
-        List<Integer> expected = new ArrayList<>();
-
-        expected.add(100);
-        expected.add(100);
-        expected.add(300);
-        expected.add(500);
-        expected.add(100);
-        expected.add(200);
-        
-        List<Integer> result = classBeingTested.Task6(data);
-        assertEquals(expected, result);
-    }
-}
-
-
-    @Test void tests_Task5() {
+    @Test
+    void tests_Task5() {
         // Arrange: Create input data and expected results
         List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> unsortedList = Arrays.asList(5, 2, 3, 4, 1);
-        
+
         // Act: Call the function under test
         boolean isSortedResult1 = Task5(sortedList);
         boolean isSortedResult2 = Task5(unsortedList);
-        
+
         // Assert: Check the results against the expected values
         assert isSortedResult1 == true : "Expected true but got false";
         assert isSortedResult2 == false : "Expected false but got true";
     }
-
-
 
 }
