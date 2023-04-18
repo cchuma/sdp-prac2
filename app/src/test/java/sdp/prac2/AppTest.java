@@ -152,17 +152,40 @@ class AppTest {
 
     @Test
     void tests_Task5() {
-        // Arrange: Create input data and expected results
-        List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
-        List<Integer> unsortedList = Arrays.asList(5, 2, 3, 4, 1);
+
+        App classBeingTested = new App();
+
+        List<Integer> list1 = new ArrayList<>();
+
+        mylist1.add(56);
+        mylist1.add(32);
+        mylist1.add(13);
 
         // Act: Call the function under test
-        boolean isSortedResult1 = Task5(sortedList);
-        boolean isSortedResult2 = Task5(unsortedList);
+        List<Integer> results = classBeingTested.Task5(mylist1)
 
         // Assert: Check the results against the expected values
-        assert isSortedResult1 == true : "Expected true but got false";
-        assert isSortedResult2 == false : "Expected false but got true";
+        assertEquals("False", results);
     }
+
+
+    @Test
+    void tests_Task5_2() {
+
+        App classBeingTested = new App();
+
+        List<Integer> list1 = new ArrayList<>();
+
+        mylist2.add(6);
+        mylist2.add(9);
+        mylist2.add(13);
+        
+        // Act: Call the function under test
+        List<Integer> results = classBeingTested.Task5(mylist2)
+
+        // Assert: Check the results against the expected values
+        assertEquals("True", results);
+    }
+
 
 }
